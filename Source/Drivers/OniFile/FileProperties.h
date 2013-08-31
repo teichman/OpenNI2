@@ -18,28 +18,11 @@
 *  limitations under the License.                                            *
 *                                                                            *
 *****************************************************************************/
-#ifndef __LINK_ONI_DEPTH_STREAM_H__
-#define __LINK_ONI_DEPTH_STREAM_H__
+#ifndef __FILE_PROPERTIES_H__
+#define __FILE_PROPERTIES_H__
 
-//---------------------------------------------------------------------------
-// Includes
-//---------------------------------------------------------------------------
-#include "LinkOniMapStream.h"
-
-//---------------------------------------------------------------------------
-// Types
-//---------------------------------------------------------------------------
-class LinkOniDepthStream :
-	public LinkOniMapStream
-{
-public:
-	LinkOniDepthStream(const char* configFile, xn::PrimeClient* pSensor, LinkOniDevice* pDevice);
-	virtual OniStatus getProperty(int propertyId, void* data, int* pDataSize);
-	virtual OniBool isPropertySupported(int propertyId);
-	virtual void notifyAllProperties();
-
-protected:
-	virtual XnStatus GetDefaultVideoMode( OniVideoMode* pVideoMode );
+enum {
+	ONI_FILE_PROPERTY_ORIGINAL_DEVICE = 0x00010001
 };
 
-#endif // __LINK_ONI_DEPTH_STREAM_H__
+#endif // __FILE_PROPERTIES_H__
