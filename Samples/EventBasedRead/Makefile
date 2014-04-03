@@ -12,6 +12,6 @@ USED_LIBS += OpenNI2
 
 EXE_NAME = EventBasedRead
 
-CFLAGS += -Wall
+CFLAGS += -Wall -Wno-unused-local-typedefs
 
 include ../../ThirdParty/PSCommon/BuildSystem/CommonCppMakefile

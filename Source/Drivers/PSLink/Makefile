@@ -30,7 +30,7 @@ else
 	USED_LIBS += usb-1.0.0
 endif
 
-CFLAGS += -Wall
+CFLAGS += -Wall -Wno-unused-local-typedefs
 
 LIB_NAME = PSLink
 
